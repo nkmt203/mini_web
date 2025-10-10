@@ -1,0 +1,113 @@
+/* ===========================
+   Trang nhập sản phẩm
+=========================== */
+#product-form-page {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+    padding: 40px 0;
+}
+
+/* Form sản phẩm */
+.product-form {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 800px;
+    margin: 0 auto; /* Căn giữa theo chiều ngang */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+/* ===========================
+   Nhóm label + input (2 cột)
+=========================== */
+.form-group {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ===========================
+   Nhãn và input
+=========================== */
+.form-label {
+    font-weight: bold;
+    color: #333;
+    text-align: right;
+}
+
+.form-input,
+.form-textarea,
+.form-select,
+.form-file {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.form-textarea {
+    height: 250px;
+    resize: vertical;
+}
+
+/* ===========================
+   Ảnh xem trước
+=========================== */
+.form-preview {
+    grid-column: 2 / 3;
+    width: 100%;
+    max-width: 200px;
+    display: block;
+    margin: 10px 0;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+/* ===========================
+   Nút submit
+=========================== */
+.form-submit {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-submit:hover {
+    background-color: #0056b3;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+@media screen and (max-width: 480px) {
+    .product-form {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .form-group {
+        grid-template-columns: 1fr;
+    }
+
+    .form-label {
+        text-align: left;
+        margin-bottom: 5px;
+    }
+
+    .form-preview {
+        max-width: 150px;
+    }
+}
