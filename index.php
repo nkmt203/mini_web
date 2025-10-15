@@ -10,7 +10,7 @@ if (isset($_GET['controller'])) {
 if (isset($_GET['action'])) {
     $actionURL = $_GET['action'];
 } else {
-    $actionURL = 'login';
+    $actionURL = 'handleLogin';
 }
 
 $controllerFile = "controllers/login_ctrl/{$controllerURL}_ctrl.php";

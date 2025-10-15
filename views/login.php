@@ -91,7 +91,7 @@
 </head>
 
 <body>
-    <form action="index.php?controller=login&action=login" method="post">
+    <form action="index.php?controller=login&action=handleLogin" method="post">
         <div class="imgcontainer">
             <img src="img_avatar2.png" alt="Avatar" class="avatar">
         </div>
