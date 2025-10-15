@@ -1,0 +1,126 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    background: linear-gradient(to right, #fdfbfb, #ebedee);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+.site-header {
+    background: linear-gradient(to right, #e91e63, #ff758c);
+    color: white;
+    padding: 25px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title a {
+    color: white;
+    text-decoration: none;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: opacity 0.3s ease;
+}
+
+.site-title a:hover {
+    opacity: 0.8;
+}
+
+.main-nav {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ffe4ec;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* ===== MAIN ===== */
+.site-main {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 30px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+    background-color: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 15px;
+    border-top: 1px solid #444;
+}
+
+.footer-text {
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-nav {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .site-title a {
+        font-size: 26px;
+    }
+
+    .site-main {
+        padding: 0 20px;
+    }
+}
